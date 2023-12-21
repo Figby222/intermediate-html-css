@@ -1,0 +1,15 @@
+absoluteUnits {
+    size: 0px;
+    size: 0in; /* inch */
+    size: 0cm; /* centimeter */
+}
+
+relativeUnits {
+    font-size: 0em; /* 1em is the pixel font-size of the parent element * 1 */
+    font-size: 0rem; /* the pixel font-size of the root element (either :root or html) */
+}
+
+viewportUnits {
+    size: 0vh; /* 1vh is equal to 1% of the viewport height */
+    size: 0vw; /* 1vw is equal to 1% of the viewport width */
+}
