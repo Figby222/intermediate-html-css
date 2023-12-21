@@ -1,0 +1,53 @@
+/* import font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* custom font  */
+
+@font-face {
+    font-family: my-cool-font;
+    src: url(./RubikScribble-Regular.ttf);
+}
+
+body {
+    font-family: my-cool-font, 'Roboto', sans-serif;
+}
+
+p {
+    font-style: italic;
+    font-style: bold;
+    letter-spacing: 5rem;
+    line-height: 1.5;
+}
+
+p {
+    /* ways to transform text  */
+    text-transform: capitalize;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: none;
+    text-transform: full-width;
+    text-transform: full-size-kana;
+
+}
+
+/* text shadows */
+p {
+    /* offset-x, offset-y, blur-radius, color  */
+    /* blur-radius and color are optional */
+    text-shadow: 1px 1px 2px black;
+
+    /* multiple shadows */
+    text-shadow:
+        1px 1px 2px red,
+        0 0 1rem blue,
+        -2px -4px 0 blue
+}
+
+.truncateText {
+    flex: 1;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
