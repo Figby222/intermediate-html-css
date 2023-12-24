@@ -1,0 +1,14 @@
+/* selects the next div sibling of .class1  */
+.class1 + div {
+
+}
+
+/* selects the div sibling after the next div sibling of .class1 */
+.class1 + div + div {
+
+}
+
+/* selects all div siblings of .class1  */
+.class1 ~ div {
+
+}
