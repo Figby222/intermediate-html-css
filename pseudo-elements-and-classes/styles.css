@@ -1,0 +1,26 @@
+/* focused element  */
+a:focus {
+
+}
+
+div:hover {
+
+}
+ /* element is being clicked */
+a:active {
+
+}
+
+/* unclicked link  */
+a:link {
+
+}
+
+/* clicked link  */
+a:visited {
+
+}
+
+div p:last-child::first-line {
+
+}
