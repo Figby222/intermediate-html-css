@@ -25,7 +25,16 @@ div p:last-child::first-line {
 
 }
 
-/* select 5th element with .myList */
+/* if list item has no siblings  */
+li:only-child {
+
+}
+
+li:last-child {
+    
+}
+
+/* select 5th element if it has .myList */
 .myList:nth-child(5) {
 
 }
@@ -41,7 +50,38 @@ div p:last-child::first-line {
 }
 
 /* every even element  */
-.mylist:nth-child(even) {
+.myList:nth-child(even) {
+
+}
+
+/* nth-child but starting from the last element  */
+.myList:nth-last-child() {
+
+}
+
+/* second of type  */
+div:nth-of-type(2) {
+
+}
+
+/* every 3rd div starting from the 4th */
+div:nth-of-type(3n+4) {
+
+}
+
+div:only-of-type {
+
+}
+
+div:last-of-type {
+
+}
+
+div:not(.vegetable) {
+
+}
+
+div:empty {
 
 }
 
