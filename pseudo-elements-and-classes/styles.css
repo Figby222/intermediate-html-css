@@ -21,6 +21,16 @@ a:visited {
     color: purple;
 }
 
+/* both :checked and :indeterminate refer to checkboxes */
+/* box has been checked */
+input:checked { 
+
+}
+
+/* box has neither been checked nor unchecked */   
+input:indeterminate {  
+}
+
 div p:last-child::first-line {
 
 }
@@ -46,6 +56,11 @@ li:last-child {
 
 /* select every third element with .myList starting from the 3rd element */
 .myList:nth-child(3n + 3) {
+
+}
+
+/* start fron 4th element and select every element before that element  */
+.myList:nth-child(-n+4) {
 
 }
 
@@ -82,20 +97,6 @@ div:not(.vegetable) {
 }
 
 div:empty {
-
-}
-
-/* customize bullet points on li */
-li::marker {
-
-}
-
-p::first-letter {
-    font-size: 2rem;
-}
-
-/* change the highlighting when a user highlights text */
-p::selection {
 
 }
 
@@ -154,4 +155,42 @@ img[src="pancakes.jpg"] {
 /* no lang attr  */
 div:not([lang]) {
 
+}
+
+/* if user clicks on link that directs them to a specific part of the page */
+/* it is determined by what ID proceeds the # in a link href ex: https://google.com/#bringMeToTheSectionWithThisID */
+section:target {
+
+}
+
+/* ::before and ::after insert a pseudoelement either before or after the specified element */
+/* but the pseudoelement will appear to be nested inside the specified element  */
+div::before {
+
+}
+
+div::after {
+
+}
+
+/* customize bullet points on li */
+li::marker {
+
+}
+
+p::first-letter {
+    font-size: 2rem;
+}
+
+/* change the highlighting when a user highlights text */
+p::selection {
+
+}
+
+div:hover::before {
+
+}
+
+div:hover::after {
+    
 }
