@@ -6,21 +6,112 @@ a:focus {
 div:hover {
 
 }
- /* element is being clicked */
+ /* element is currently being clicked */
 a:active {
 
 }
 
 /* unclicked link  */
 a:link {
-
+    color: blue;
 }
 
 /* clicked link  */
 a:visited {
-
+    color: purple;
 }
 
 div p:last-child::first-line {
+
+}
+
+/* select 5th element with .myList */
+.myList:nth-child(5) {
+
+}
+
+/* select every third element with .myList */
+.myList:nth-child(3n) {
+
+}
+
+/* select every third element with .myList starting from the 3rd element */
+.myList:nth-child(3n + 3) {
+
+}
+
+/* every even element  */
+.mylist:nth-child(even) {
+
+}
+
+/* customize bullet points on li */
+li::marker {
+
+}
+
+p::first-letter {
+    font-size: 2rem;
+}
+
+/* change the highlighting when a user highlights text */
+p::selection {
+
+}
+
+/* any element with src attribute */
+[src] {
+
+}
+
+/* any img with src  */
+img[src] {
+
+}
+
+img[src="pancakes.jpg"] {
+
+}
+
+/* ^= checks if the class starts with co */
+[class^='co'] {
+
+}
+/* ex: .colorado, .cool, .company, etc  */
+
+/* ends with .jpg  */
+[src$='.jpg'] {
+
+}
+
+/* has oo in it */
+[class*='oo'] {
+
+}
+/* classes example: .good, .food, .floof  */
+
+/* contains the whole word logo */
+[class~='logo'] {
+
+}
+
+/* substring separated by hyphen  */
+[class|='cookies'] {
+
+}
+/* ex: .cookies-sugar, .cookies-chocolate-chip, etc.  */
+
+/* i for case insensitive */
+[class='cookies' i] {
+
+}
+
+/* case sensitive */
+[class='cookies' s] {
+
+}
+
+/* no lang attr  */
+div:not([lang]) {
 
 }
