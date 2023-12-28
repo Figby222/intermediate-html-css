@@ -1,0 +1,28 @@
+.class {
+    position: static; /* default positioning mode */
+    position: absolute; /* position element to exact point on screen without disturbing or affecting other elements */
+    position: fixed; /* positioned relative to the viewport (using top, right, bottom, left), and it will stay there as the user scrolls */
+    position: sticky; /* element acts normal until the user scrolls passed it, at which point it sticks to the top of the viewport until it reaches the bottom of its parent element*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.popUp {
+    opacity: 0;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    background: blue;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    > * {
+        flex: 0 0 0;
+    }
+}
