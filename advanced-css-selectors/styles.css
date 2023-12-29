@@ -12,3 +12,31 @@
 .class1 ~ div {
 
 }
+
+p {
+    ~ img {
+
+    }
+}
+/* is the same as:  */
+p ~ img {
+
+}
+
+p {
+    & img {
+
+    }
+}
+
+/* is the same as: */
+
+p img {
+
+}
+
+p {
+    > img {
+        
+    }
+}
