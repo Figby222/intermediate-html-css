@@ -1,0 +1,42 @@
+:root {
+    --num1: 6px;
+    --num2: 4px;
+    --main: calc(50vh + calc(var(--num1) + var(--num2)))
+    /* you can nest calcs */
+}
+
+body {
+
+}
+
+.coolImage {
+    width: min(150px, 100%);
+    /* gets min size between 150px and 100% (of parent width) */
+    /* so if parent width is smaller than 150 px, coolImage would take up the entire width of its parent */
+    width: min(150px, 150rem - 2em);
+    /* can do math here as well */
+    /* also width will never be more than 150px */
+
+    /* opposite basically */
+    width: max(100px, 4em, 75%);
+    /* width will never be less than 100px */
+
+    width: clamp(320px, 80vw, 500px);
+    /* width shrunk below 320px? limit 320px, width expanded above 500px? limit to 500px else 80vw */
+    /* basically a 320px floor, 500px ceiling, and 80vw if those limits are not hit */
+
+    width: clamp(45ch, 50%, 75ch);
+    /* ch is for characters, as in alphabet */
+
+}
+
+footer {
+    padding: 2rem, max(2rem, 50vw - var(--num1));
+    /* make a min padding for the horizontal axis */
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    /* makes the typography more fluid with the viewport width, whilst setting a min and max size */
+}
