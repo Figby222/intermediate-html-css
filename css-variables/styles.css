@@ -1,0 +1,37 @@
+:root {
+    --colorText: blue;
+    /* 2nd arg is a fallback value */
+    color: var(--undeclaredProperty, var(--colorText));
+    background-color: var(--undeclaredProperty, blue);
+    /* can nest as well */
+    color: var(--undeclaredProperty, var(--undeclaredProperty2, blue));
+
+    --bgColor: white;
+    --textColor: black;
+    --theme-name: "light";
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* set properties if user has OS set to dark theme*/
+        --bgColor: white;
+        --textColor: black;
+        --theme-name: "dark";
+    }
+}
+
+div {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+
+@property --myColor {
+    syntax: "<color>";
+    inherits: false; /* property is not inherited down the node tree */;
+    initial-value: blue;
+}
+
+div {
+    --myColor: green;
+}
