@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="example.com/path" method="get">
+        <!-- get method is used to retrieve info from a database -->
+    </form>
+    <form action="example.com/path" method="post">
+        <!-- post method is used to manipulate a database -->
+        <label for="favoriteFood">Favorite Food:</label>
+        <input type="text" id="favoriteFood" name="favoriteFood" placeholder="pizza">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" placeholder="password">
+        <label for="amount">amount</label>
+        <input type="number" id="amount" name="amount">
+        <label for="date">date of birth</label>
+        <input type="date" id="date" name="date">
+    </form>
+    <textarea>Hello</textarea>
+    <textarea rows="20" cols="60"></textarea>
+    <!-- control initial height of text area  -->
+    <select name="cookie">
+        <option value="chocolate-chip">chocolate chip</option>
+        <option value="sugar" selected>sugar</option>
+    </select>
+    <select name="food">
+        <optgroup label="pizza">
+            <option value="cheese-pizza">cheese</option>
+            <option value="pepperoni-pizza">pepperoni</option>
+        </optgroup>
+        <optgroup label="bread">
+            <option value="white-bread">white</option>
+            <option value="sourdough-bread">sourdough</option>
+        </optgroup>
+    </select>
+    <!-- radio buttons are recognized as part of the same group through the name attribute  -->
+    <div>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">child</label>
+    </div>
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+        <label for="adult">adult</label>
+    </div>
+    <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior">
+        <label for="senior">senior</label>
+    </div>
+    <!-- same as radio except you can select multiple -->
+    <div>
+        <input type="checkbox" id="chocolate-chip" name="cookies" value="chocolate-chip">
+        <label for="chocolate-chip">chocolate chip</label>
+    </div>
+    <div>
+        <input type="checkbox" id="sugar" name="cookies" value="sugar" checked>
+        <label for="sugar">sugar</label>
+    </div>
+    <div>
+        <input type="checkbox" id="oatmeal" name="cookies" value="oatmeal">
+        <label for="oatmeal">oatmeal</label>
+    </div>
+    <!-- single checkbox for true or false -->
+    <div>
+        <input type="checkbox" id="cookies-choice" name="cookies-choice" value="cookies-choice" checked>
+        <label for="cookies-choice">Do you like cookies?</label>
+    </div>
+    <button type="submit">submit button</button>
+    <button type="reset">reset form</button>
+    <button type="generic">use for anything</button>
+    <fieldset>
+        <legend>Contact Details</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="phone-number">phone number</label>
+        <input type="tel" id="phone-number" name="phone-number">
+
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">GIVE ME YOUR PASSWORD</label>
+        <input type="password" id="password" name="password">
+    </fieldset>
+    <fieldset>
+        <!-- another group of fields...  -->
+    </fieldset>
+    <form action="handlemyforms.com" method="post">
+        <ul>
+            <li>
+                <label for="name">name</label>
+                <input type="text" id="name" name="user-name">
+            </li>
+            <li>
+                <label for="email">email</label>
+                <input type="email" id="email" name="user-email">
+            </li>
+            <li>
+                <label for="msg">message</label>
+                <textarea id="msg" name="user-message" placeholde="cookies">default text</textarea>
+            </li>
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
