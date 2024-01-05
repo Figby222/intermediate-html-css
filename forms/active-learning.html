@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active learning: building a form structure</title>
+    <link rel="stylesheet" href="active-learning-styles.css">
+</head>
+<body>
+    <form>
+        <h1>Payment form</h1>
+        <p>
+            Required fields are marked by <span aria-label="required">*</span>
+        </p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="A">
+                            Ace
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="K">
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="Q">
+                            Queen
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="email">
+                    <span>Email: </span>
+                    <span aria-label="required">*</span>
+                </label>
+                <input type="email" id="email" name="usermail" required>
+            </p>
+            <p>
+                <label for="password">
+                    <span>Password: </span>
+                    <span aria-label="required">*</span>
+                </label>
+                <input type="password" id="password" name="password" required>
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+              <label for="card">
+                <span>Card type:</span>
+              </label>
+              <select id="card" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mc">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </p>
+            <p>
+              <label for="number">
+                <span>Card number:</span>
+                <strong><span aria-label="required">*</span></strong>
+              </label>
+              <input type="tel" id="number" name="cardnumber" required />
+            </p>
+            <p>
+              <label for="expiration">
+                <span>Expiration date:</span>
+                <strong><span aria-label="required">*</span></strong>
+              </label>
+              <input
+                type="text"
+                id="expiration"
+                required
+                placeholder="MM/YY"
+                pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+            </p>
+          </section>
+          <section>
+            <p>
+              <button type="submit">Validate the payment</button>
+            </p>
+          </section>
+          <input type="file" name="file" id="file" accept="image/" multiple>
+          <input type="search" id="search" name="search">
+          <input type="tel" id="anything-involving-numbers" name="hi">
+          <input type="url" id="url" name="url">
+          <input type="number" id="number" name="number" min="1" max="10" step="any">
+          <!-- step="any" to allow float nums -->
+          <input type="checkbox">
+          <input type="range" id="slider" name="slider" min="50000" max="100000" step="100">
+          <output class="price-output" for="slider"></output>
+          <!-- add event listener to output element to listen for input event in js and display input num onto output element -->
+          <div class="time-inputs">
+              <input type="datetime-local" name="datetime" id="datetime">
+              <input type="month" name="month" id="month">
+              <input type="time">
+              <input type="week">
+              <input 
+                type="date"
+                name="myDate"
+                min="2005-04-04"
+                max="2024-04-01"
+                step="7"
+                id="myDate">
+          </div>
+          <input type="color">
+          <textarea rows="80" cols="79" wrap="off"></textarea>
+          <input type="hidden" id="timestamp" name="timestamp" value="the time that is right now">
+          <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+          <datalist id="mySuggestion">
+                <label for="suggestion">or pick a fruit</label>
+                <select name="altFruit" id="suggestion">
+                    <option value="">these are autocomplete values</option>
+                    <option value="">aploe</option>
+                    <option value="">asdf</option>
+                    <option value="">sdaf</option>
+                    <option value="">asdf</option>
+                </select>
+          </datalist>
+    </form>
+</body>
+</html>

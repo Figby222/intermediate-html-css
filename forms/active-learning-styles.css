@@ -1,0 +1,75 @@
+span[aria-label="required"] {
+    color: red;
+    font-weight: bold;
+}
+li {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    /* make font and fontsize consistent throughout the webpage  */
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    /* make box sizing consistent on these elements */
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* position legend to where we want */
+fieldset {
+    position: relative;
+}
+legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+input {
+    /* remove some operating system level styles from input elements which are hard to control */
+    appearance: none;
+}
+
+/* style checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
