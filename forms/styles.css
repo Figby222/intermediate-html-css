@@ -61,3 +61,6 @@ label {
        between the labels and their text fields */
     margin-left: 0.5em;
   }
+  span[aria-label="required"] {
+    color: red;
+  }
