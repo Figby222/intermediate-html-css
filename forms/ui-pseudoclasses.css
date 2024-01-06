@@ -1,0 +1,61 @@
+.field:required {
+
+}
+.field:optional {
+
+}
+
+.field:valid {
+
+}
+.field:invalid {
+
+}
+
+.field:in-range, .field:out-of-range {
+
+}
+
+:enabled, :disabled {
+
+}
+
+:read-only, :read-write {
+
+}
+
+input[type="radio"]- :checked, :indeterminate, :default {
+
+}
+
+input:invalid + span::before {
+
+}
+
+input:valid + span::before {
+
+}
+
+.parent-div:focus-within {
+    /* when an element or a child of the element is being focused */
+}
+
+:focus-visible {
+    /* element is focused using the keyboard  */
+}
+
+:placeholder-shown {
+
+}
+
+:blank {
+    /* empty form controls  */
+}
+
+:empty {
+    /* elements with no children  */
+}
+
+:user-invalid {
+    /* only invalid if user has already interacted with the input */
+}
